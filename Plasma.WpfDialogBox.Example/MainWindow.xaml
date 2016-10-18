@@ -1,0 +1,28 @@
+﻿<Window x:Class="Plasma.WpfDialogBox.Example.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Plasma.WpfDialogBox.Example"
+        xmlns:boxView="clr-namespace:Plasma.WpfDialogBox.Views;assembly=Plasma.WpfDialogBox"
+        xmlns:boxVM="clr-namespace:Plasma.WpfDialogBox.ViewModels;assembly=Plasma.WpfDialogBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type boxVM:MessageBoxContainerViewModel}">
+                <boxView:MessageBoxContainer></boxView:MessageBoxContainer>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <Button Command="{Binding YesNoMessageBoxCommand}" >Yes/No MessageBox</Button>
+        </StackPanel>
+        <ContentControl Height="Auto" 
+                        Width="Auto"
+                        Content="{Binding CurrentMessageBox}">
+            <!--MESSAGEBOX CONTAINER-->
+        </ContentControl>
+    </Grid>
+</Window>

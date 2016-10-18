@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plasma.WpfFrameWork", "Plas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plasma.WpfDialogBox", "Plasma.WpfDialogBox\Plasma.WpfDialogBox.csproj", "{B0A33CFD-DD50-4FD3-A022-7DD35164E2A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plasma.WpfDialogBox.Example", "Plasma.WpfDialogBox.Example\Plasma.WpfDialogBox.Example.csproj", "{C0772C1B-D34D-4D8F-B632-A2ECC63C831B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B0A33CFD-DD50-4FD3-A022-7DD35164E2A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0A33CFD-DD50-4FD3-A022-7DD35164E2A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0A33CFD-DD50-4FD3-A022-7DD35164E2A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0772C1B-D34D-4D8F-B632-A2ECC63C831B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0772C1B-D34D-4D8F-B632-A2ECC63C831B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0772C1B-D34D-4D8F-B632-A2ECC63C831B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0772C1B-D34D-4D8F-B632-A2ECC63C831B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
