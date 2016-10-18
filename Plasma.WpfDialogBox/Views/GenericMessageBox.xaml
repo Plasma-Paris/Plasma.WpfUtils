@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Plasma.WpfDialogBox.Views"
-             DataContext="{Binding GenericMessageBox, Source={StaticResource Locator}}"
+             xmlns:vm="clr-namespace:Plasma.WpfDialogBox.ViewModels"
              mc:Ignorable="d" d:DesignWidth="300" d:DesignHeight="150"
              MaxWidth="300" MinHeight="100">
     <Border BorderThickness="1" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
@@ -33,11 +33,11 @@
                 <Button Command="{Binding YesCommand}" 
                         Margin="5"
                         Width="70"
-                        Visibility="{Binding ButtonYesIsVisible, Converter={StaticResource BoolToVisibilityConverter}}">Oui</Button>
+                        Visibility="{Binding ButtonYesIsVisible, Converter={StaticResource BoolToVisibilityConverter}}">Yes</Button>
                 <Button Command="{Binding NoCommand}"
                         Margin="5"
                         Width="70"
-                        Visibility="{Binding ButtonNoIsVisible, Converter={StaticResource BoolToVisibilityConverter}}">Non</Button>
+                        Visibility="{Binding ButtonNoIsVisible, Converter={StaticResource BoolToVisibilityConverter}}">No</Button>
                 <Button Command="{Binding OkCommand}"
                         Margin="5"
                         Width="70"
@@ -45,7 +45,7 @@
                 <Button Command="{Binding CancelCommand}"
                         Margin="5"
                         Width="70"
-                        Visibility="{Binding ButtonCancelIsVisible, Converter={StaticResource BoolToVisibilityConverter}}">Annuler</Button>
+                        Visibility="{Binding ButtonCancelIsVisible, Converter={StaticResource BoolToVisibilityConverter}}">Cancel</Button>
             </StackPanel>
         </Grid>
     </Border>

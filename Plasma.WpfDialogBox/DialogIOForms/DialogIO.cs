@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace Plasma.WpfDialogBox.DialogIOForms
@@ -8,6 +9,8 @@ namespace Plasma.WpfDialogBox.DialogIOForms
         protected readonly CommonFileDialog _DialogIO;
         protected DialogIO(CommonFileDialog dialog)
         {
+            if (dialog == null)
+                throw new ArgumentNullException(nameof(dialog), $"{nameof(dialog)} is null.");
             _DialogIO = dialog;
         }
         public virtual MessageBoxResult ShowDialog()

@@ -20,6 +20,8 @@ namespace Plasma.WpfDialogBox
 
         public MessageBoxService(GenericMessageBoxViewModel genericMessageBoxViewModel)
         {
+            if (genericMessageBoxViewModel == null)
+                throw new ArgumentNullException(nameof(genericMessageBoxViewModel), $"{nameof(genericMessageBoxViewModel)} is null.");
             _GenericMessageBoxViewModel = genericMessageBoxViewModel;
         }
         
@@ -54,7 +56,7 @@ namespace Plasma.WpfDialogBox
                     _GenericMessageBoxViewModel.ButtonNoIsVisible = true;
                     break;
                 default:
-                    throw new ArgumentException($"La valeur de l'enum {nameof(MessageBoxButton)} {button} n'est pas supportée.");
+                    throw new ArgumentException($"The enum value {nameof(MessageBoxButton)} {button} is not supported.");
             }
 
             return await ShowCustomMessageBox(_GenericMessageBoxViewModel); 
@@ -109,3 +111,4 @@ namespace Plasma.WpfDialogBox
 
 // TODO: Multi message box
 // TODO: Window
+// TODO:MultiLaunguage

@@ -1,13 +1,26 @@
-﻿namespace Plasma.WpfDialogBox.ViewModels
+﻿using Plasma.WpfFrameWork;
+
+namespace Plasma.WpfDialogBox.ViewModels
 {
-    public class MessageBoxContainerViewModel
+    public class MessageBoxContainerViewModel : ViewModelBase
     {
         public MessageBoxContainerViewModel(BaseMessageBoxViewModel messageBoxViewModel)
         {
             CurrentMessageBoxContent = messageBoxViewModel;
             IsModal = CurrentMessageBoxContent.IsModal;
         }
-        public BaseMessageBoxViewModel CurrentMessageBoxContent { get; private set; }
+        BaseMessageBoxViewModel _CurrentMessageBoxContent;
+        public BaseMessageBoxViewModel CurrentMessageBoxContent
+        {
+            get
+            {
+                return _CurrentMessageBoxContent;
+            }
+            private set
+            {
+                Set(() => CurrentMessageBoxContent, ref _CurrentMessageBoxContent, value);
+            }
+        }
 
         public bool IsModal { get; private set; } 
     }
