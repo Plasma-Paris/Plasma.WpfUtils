@@ -1,4 +1,4 @@
- ![logo](https://github.com/Plasma-Paris/Wox.Plugins/raw/master/ReadMeFiles/logo.png)
+ ![logo](https://github.com/Plasma-Paris/Plasma.WpfUtils/raw/master/ReadMeFiles/logo.png)
 
 # Plasma.WpfUtils
 
@@ -106,7 +106,7 @@ async void YesNoMessageBox()
 
 #### Result
 
- ![1](https://github.com/Plasma-Paris/Wox.Plugins/raw/master/ReadMeFiles/1.png) ![2](https://github.com/Plasma-Paris/Wox.Plugins/raw/master/ReadMeFiles/2.png) ![3](https://github.com/Plasma-Paris/Wox.Plugins/raw/master/ReadMeFiles/3.png)
+ ![1](https://github.com/Plasma-Paris/Plasma.WpfUtils/raw/master/ReadMeFiles/1.png) ![2](https://github.com/Plasma-Paris/Plasma.WpfUtils/raw/master/ReadMeFiles/2.png) ![3](https://github.com/Plasma-Paris/Plasma.WpfUtils/raw/master/ReadMeFiles/3.png)
 
 #### Custom the *GenericMessageBox*
 
@@ -136,7 +136,7 @@ And you can make your own view as a `UserControl`, using this view model
 </ResourceDictionary>
 ```
 
- ![4](https://github.com/Plasma-Paris/Wox.Plugins/raw/master/ReadMeFiles/4.png)
+ ![4](https://github.com/Plasma-Paris/Plasma.WpfUtils/raw/master/ReadMeFiles/4.png)
 
 #### Make your own MessageBox
 
