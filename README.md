@@ -172,6 +172,36 @@ With the `ShowMessage` method, the user can't interact with other control *under
 
 If you want to reproduce this behavior, just set `IsModal` to `true` in your `CustomViewModel`.
 
+#### Dialog IO
+
+Dialog IO is a simple wrapper for `Microsoft.WindowsAPICodePack.Dialogs` to simplify usage and facilitate the creation of unit tests.
+
+##### Exemple
+
+```c#
+private readonly IDialogIOFactory _DialogIOFactory = new DialogIOFactory();
+
+void OpenFileDialog()
+{
+    var openFileDialog = _DialogIOFactory.CreateOpenFileDialog(".csv", "CSV files (.csv)", "*.csv");
+    if (openFileDialog.ShowDialog() != MessageBoxResult.OK)
+        return;
+    
+    // Use openFileDialog.FileName;
+    // [...]
+}
+
+void ChooseDirectoryDialog()
+{
+    var chooseFolerDialog = _DialogIOFactory.CreateChooseDirectoryDialog();
+    if (chooseFolerDialog.ShowDialog() != MessageBoxResult.OK)
+        return;
+      
+    // Use chooseFolerDialog.DirectoryName;
+    // [...]
+}
+```
+
 ### To Do
 
 * Make the `GenericMessageBox` usable with multiple languages.
