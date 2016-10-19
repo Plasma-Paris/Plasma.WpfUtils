@@ -40,7 +40,7 @@ public class MainViewModel : ViewModelBase
 }
 ```
 
-Suscribe to the service event and set the `CurrentMessageBox` from this events
+Suscribe to the service events and set the `CurrentMessageBox` for this events
 
 ```c#
 MessageBoxService _Service;
@@ -68,7 +68,7 @@ Add a `ContentControl` to your view for displaying the message box
 </Window>
 ```
 
-Add the correspondante `DataTemplate` and namespaces
+Add the corresponding `DataTemplate` and namespaces
 
 ```xml
 <Window 
@@ -98,9 +98,9 @@ async void YesNoMessageBox()
 {
     var result = await _Service.ShowMessage("This is the content of the message box", "This is the title", System.Windows.MessageBoxButton.YesNo);
     if (result == System.Windows.MessageBoxResult.Yes)
-        await _Service.ShowMessage("User chosse Yes !");
+        await _Service.ShowMessage("User choose Yes !");
     if (result == System.Windows.MessageBoxResult.No)
-        await _Service.ShowMessage("User chosse No !");
+        await _Service.ShowMessage("User choose No !");
 }
 ```
 
@@ -168,7 +168,7 @@ var result = await _Service.ShowCustomMessageBox(new MyMessageBoxViewModel�
 
 ##### The *IsModal* option
 
-With the `ShowMessage` method, the user can't intercat with other control *under* the message box, because the `BaseMessageBoxViewModel` has a `IsModal` boolean property automaticly set to `true` for the `GenericMessageBoxViewModel`. 
+With the `ShowMessage` method, the user can't interact with other control *under* the message box, because the `BaseMessageBoxViewModel` has a `IsModal` boolean property automaticly set to `true` for the `GenericMessageBoxViewModel`. 
 
 If you want to reproduce this behavior, just set `IsModal` to `true` in your `CustomViewModel`.
 
@@ -176,12 +176,11 @@ If you want to reproduce this behavior, just set `IsModal` to `true` in your `Cu
 
 * Make the `GenericMessageBox` usable with multiple languages.
 * Add a parameter for allow to displaying the view into a real windows, instead of a WPF "popin".
-* Allow to superpose message box (by exemple, an action in a message box wich open a other message box)
+* Allow to superpose message box (by exemple, an action in a message box that open a other message box)
 
 ## Contributing
 
-If you'd like to contribute, please fork the repository and use a feature
-branch. Pull requests are welcome.
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome.
 
 ## Licensing
 
